@@ -1,9 +1,7 @@
 from langchain_google_genai import ChatGoogleGenerativeAI
-from dotenv import load_dotenv
 from pydantic import BaseModel, Field
 from langchain_core.prompts import ChatPromptTemplate, SystemMessagePromptTemplate, HumanMessagePromptTemplate
 
-load_dotenv()
 
 class GradeDocuments(BaseModel):
     """Binary score to check relevance of the given document to the given question"""
