@@ -11,6 +11,7 @@ web_search_tool = TavilySearch(
 )
 
 def web_search(state: GraphState) -> GraphState:
+    print("IN web_search node")
     question = state['question']
     documents = state['documents']
 
