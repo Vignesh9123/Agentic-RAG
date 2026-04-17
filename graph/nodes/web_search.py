@@ -20,7 +20,7 @@ def web_search(state: GraphState) -> GraphState:
     })
     search_content = "\n".join([
         web_result["content"] for web_result in web_results["results"]
-    ])
+    ]) # TODO: This should ideally be a WebBaseLoader that scrapes the content of the web_results urls and put that content in search doc
     search_doc = Document(search_content)
     if documents is not None:
         documents.append(search_doc)
